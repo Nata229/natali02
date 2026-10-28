@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA — Студія Краси та СПА</title>
+    <!-- Шрифти Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Іконки FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Підключення зовнішнього CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Шапка сайту (Header) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-title">AURA</span>
+                <span class="logo-subtitle">BEAUTY STUDIO</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link">Про нас</a>
+                <a href="#services" class="nav-link">Послуги</a>
+                <a href="#masters" class="nav-link">Майстри</a>
+                <a href="#reviews" class="nav-link">Відгуки</a>
+                <a href="#contacts" class="nav-link">Контакти</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-primary open-booking-btn">Онлайн запис</button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Головна секція (Hero Section) -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="hero-subtitle">Простір твоєї гармонії та краси</span>
+                <h1 class="hero-title">Підкресліть свою природну привабливість</h1>
+                <p class="hero-text">Преміальні процедури догляду за волоссям, шкірою та тілом від провідних спеціалістів у самому центрі міста.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg open-booking-btn">Обрати послугу та записатись</button>
+                    <a href="#services" class="btn btn-outline btn-lg">Переглянути послуги</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Років досвіду</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">12k+</span>
+                        <span class="stat-label">Задоволених клієнтів</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">Середній рейтинг</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Про нас (About Section) -->
+        <section id="about" class="section about-section">
+            <div class="container grid-2">
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800" alt="Салон AURA" class="img-main">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" alt="Атмосфера салону" class="img-secondary">
+                </div>
+                <div class="about-text">
+                    <span class="section-tag">Про нашу студію</span>
+                    <h2 class="section-title">Місце, де час зупиняється задля вашої краси</h2>
+                    <p class="description">У студії AURA ми поєднали високий професіоналізм, новітні технології б'юті-індустрії та атмосферу абсолютного релаксу.</p>
+                    <p class="description">Ми працюємо виключно з преміальною гіпоалергенною косметикою та дбаємо про кожну деталь вашого перебування у нас.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Сертифіковані майстри міжнародного рівня</li>
+                        <li><i class="fa-solid fa-check"></i> Індивідуальний підбір процедур та догляду</li>
+                        <li><i class="fa-solid fa-check"></i> 100% стерильність та безпека інструментів</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Каталог послуг (Services Section) -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Наші послуги</span>
+                    <h2 class="section-title">Оберіть вашу ідеальну процедуру</h2>
+                </div>
+
+                <!-- Таби категорій -->
+                <div class="service-tabs" id="serviceTabs">
+                    <button class="tab-btn active" data-category="all">Усі послуги</button>
+                    <button class="tab-btn" data-category="hair">Волосся</button>
+                    <button class="tab-btn" data-category="nails">Нігтьовий сервіс</button>
+                    <button class="tab-btn" data-category="face">Косметологія</button>
+                    <button class="tab-btn" data-category="spa">СПА та Масаж</button>
+                </div>
+
+                <!-- Сітка послуг -->
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Заповнюється динамічно через JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Майстри (Masters Section) -->
+        <section id="masters" class="section masters-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Наша команда</span>
+                    <h2 class="section-title">Творці вашого неперевершеного образу</h2>
+                </div>
+                <div class="masters-grid" id="mastersGrid">
+                    <!-- Заповнюється динамічно через JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Відгуки (Reviews Section) -->
+        <section id="reviews" class="section reviews-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Відгуки</span>
+                    <h2 class="section-title">Що про нас кажуть клієнти</h2>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Робила складне фарбування у Олени. Результат перевершив усі мої очікування! Волосся м'яке, колір саме такий, як я мріяла. Атмосфера в салоні чудова."</p>
+                        <div class="review-author">
+                            <strong>Марія Коваленко</strong>
+                            <span>Постійний клієнт</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Масаж обличчя від Софії — це справжня магія! Шкіра сяє, напруга зникла. Дуже ввічливий персонал та смачна кава."</p>
+                        <div class="review-author">
+                            <strong>Ірина Мельник</strong>
+                            <span>Клієнт з 2023 року</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Завжди роблю манікюр у Тетяни. Покриття тримається ідеально майже місяць! Стерильність інструментів для мене на першому місці, і тут з цим усе строго."</p>
+                        <div class="review-author">
+                            <strong>Оксана Шевченко</strong>
+                            <span>Постійний клієнт</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок контакту та опитування -->
+        <section id="contacts" class="section contacts-section">
+            <div class="container grid-2">
+                <div class="contact-info">
+                    <span class="section-tag">Контакти</span>
+                    <h2 class="section-title">Завітайте до нас у гості</h2>
+                    <p class="description">Ми завжди раді бачити вас у нашій затишній студії.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Адреса:</strong>
+                                <p>м. Київ, вул. Хрещатик, 24, поверх 2</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong>Графік роботи:</strong>
+                                <p>Щодня: з 09:00 до 21:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Телефон:</strong>
+                                <p><a href="tel:+380441234567">+38 (044) 123-45-67</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="newsletter-box">
+                    <h3>Підпишіться на знижки</h3>
+                    <p>Отримуйте спеціальні пропозиції та секретні акції першими!</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" placeholder="Ваш Email" required>
+                        <button type="submit" class="btn btn-primary">Підписатися</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Підвал (Footer) -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="#" class="logo">
+                    <span class="logo-title">AURA</span>
+                </a>
+                <p>© 2026 AURA Beauty Studio. Усі права захищені.</p>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно онлайн-запису -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-card">
+            <button class="modal-close" id="closeModal">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Онлайн запис</h2>
+                <div class="step-indicator">
+                    <span class="step-dot active" data-step="1">1</span>
+                    <span class="step-line"></span>
+                    <span class="step-dot" data-step="2">2</span>
+                    <span class="step-line"></span>
+                    <span class="step-dot" data-step="3">3</span>
+                    <span class="step-line"></span>
+                    <span class="step-dot" data-step="4">4</span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <!-- Крок 1: Вибір послуги -->
+                <div class="booking-step active" id="step1">
+                    <h3>Крок 1: Оберіть послугу</h3>
+                    <div class="booking-services-list" id="modalServicesList"></div>
+                </div>
+
+                <!-- Крок 2: Вибір майстра -->
+                <div class="booking-step" id="step2">
+                    <h3>Крок 2: Оберіть майстра</h3>
+                    <div class="booking-masters-list" id="modalMastersList"></div>
+                </div>
+
+                <!-- Крок 3: Вибір дати та часу -->
+                <div class="booking-step" id="step3">
+                    <h3>Крок 3: Оберіть дату та час</h3>
+                    <div class="form-group">
+                        <label for="bookingDate">Дата візиту:</label>
+                        <input type="date" id="bookingDate" class="form-control">
+                    </div>
+                    <label>Доступні часові слоти:</label>
+                    <div class="time-slots-grid" id="timeSlots"></div>
+                </div>
+
+                <!-- Крок 4: Введення даних -->
+                <div class="booking-step" id="step4">
+                    <h3>Крок 4: Ваші контактні дані</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="clientName">ПІБ / Ім'я *</label>
+                            <input type="text" id="clientName" class="form-control" placeholder="Олена Петренко" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">Номер телефону *</label>
+                            <input type="tel" id="clientPhone" class="form-control" placeholder="+38 (097) 000-00-00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientComment">Коментар чи побажання (необов'язково)</label>
+                            <textarea id="clientComment" class="form-control" rows="3" placeholder="Додаткові деталі..."></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Підтвердження успішного запису -->
+                <div class="booking-step" id="stepSuccess">
+                    <div class="success-message">
+                        <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                        <h3>Запис успішно підтверджено!</h3>
+                        <p>Дякуємо, що обрали AURA. Ми зателефонуємо вам найближчим часом для уточнення деталей.</p>
+                        <div class="receipt-card" id="bookingReceipt"></div>
+                        <button class="btn btn-primary" id="finishBookingBtn">Завершити</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer" id="modalFooter">
+                <button class="btn btn-outline" id="prevStepBtn" style="display: none;">Назад</button>
+                <button class="btn btn-primary" id="nextStepBtn">Далі</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Повідомлення Тост -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Підключення зовнішнього JS -->
+    <script src="script.js"></script>
+</body>
+</html>
